@@ -1,0 +1,308 @@
+.right{
+  color: lightgray;
+}
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    margin-left: 5%;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+    max-width: 90%;
+}
+
+.form-card {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #4CAEA9;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 120px;
+    font-weight: bold;
+    background: #4CAEA9;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #56a4a0; /*Groene kleur hover*/
+}
+
+#msform .action-button-previous {
+    width: 120px;
+    background-color: transparent;
+    margin-right: 3px;
+    color: #9AA4A8;
+    font-size: 18px;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    color: #4CAEA9;
+}
+
+.container-progressbar{
+  width: 300px;
+}
+
+.container-form{
+  width: 800px;
+  margin-top: 50px;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    /* color: #4CAEA9; */
+    margin-bottom: 30px;
+    font-weight: normal;
+    text-align: left
+}
+
+.green-text {
+    color: #4CAEA9;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+
+#progressbar .active {
+    color: #4CAEA9
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    /* width: 25%; */
+    float: left;
+    position: relative;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.white{
+  margin-left: 25px;
+}
+
+.white-space {
+  margin-top: 40px;
+}
+
+.icon{
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.center{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#progressbar #account:before {
+    /* font-family: FontAwesome; */
+    /* content: "\f13e" */
+    content: "1";
+}
+
+#progressbar #personal:before {
+    /* font-family: FontAwesome; */
+    /* content: "\f007" */
+    content: "2";
+}
+
+#progressbar #payment:before {
+    /* font-family: FontAwesome; */
+    /* content: "\f030" */
+    content: "3";
+}
+
+#progressbar #confirm:before {
+    /* font-family: FontAwesome; */
+    /* content: "\f00c" */
+    content: "4";
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    /* margin: 0 auto 10px auto; */
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    height: 75px;
+    width: 3px;
+    background: lightgray;
+    position: absolute;
+    z-index: -1
+}
+
+li#confirm.step::after{
+  display: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #4CAEA9
+}
+
+.progress {
+    height: 20px
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.row{
+  margin-bottom: 20px;
+}
+section {
+  display: flex;
+  /* flex-flow: row wrap; */
+}
+.set-column{
+  display: block;
+  flex-flow: row wrap;
+}
+section > div {
+  flex: 1;
+  padding: 0.5rem;
+}
+input[type="radio"] {
+  display: none;
+  &:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+}
+
+label.select {
+  height: 100%;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #707070;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+  position: relative;
+}
+label.select-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #707070;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+  position: relative;
+}
+
+input[type="radio"]:checked + label {
+  color: #FFF;
+  background-color: #4CAEA9;
+  border: 2px solid #4CAEA9;
+}
+p {
+  font-weight: 900;
+}
+.trainer{
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}

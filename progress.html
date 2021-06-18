@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colours Match Wizard</title>
+    <!-- Externe JS & CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/def5a10478.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script>
+    <!-- Eigen JS & CSS -->
+    <script src="progress.js"></script>
+    <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div>
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+
+                <form id="msform">
+
+                    <!-- progressbar -->
+                    <div class="container-progressbar">
+                        <ul id="progressbar">
+                            <div class="">
+                                <li class="active step" id="account"></li>
+                                <div class="right">
+                                    <strong class="active">Trainingswensen</strong>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <li class="white"></li>
+                                <div class="right"><strong></strong></div>
+                            </div>
+                            <div class="">
+                                <li class="white"></li>
+                                <div class="right"><strong></strong></div>
+                            </div>
+                            <div class="">
+                                <li class="white"></li>
+                                <div class="right"><strong></strong></div>
+                            </div>
+                            <div class="">
+                                <li class="white"></li>
+                                <div class="right"><strong></strong></div>
+                            </div>
+                            <div class="">
+                                <li class="step" id="personal"></li>
+                                <div class="right">
+                                    <strong>Gegevens invullen</strong>
+                                </div>
+                            </div>
+                            <div class="">
+                                <li class="step" id="payment"></li>
+                                <div class="right">
+                                    <strong>Trainer Selecteren</strong>
+                                </div>
+                            </div>
+                            <div class="last">
+                                <li class="step" id="confirm"></li>
+                                <div class="right">
+                                    <strong>Offerte aanvragen</strong>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <!-- Formulier met vragen -->
+                    <div class="container-form">
+                        <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Heb je met jouw organisatie al wel eens een teambuilding
+                                            training gedaan? </h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <section>
+                                    <div>
+                                        <input type="radio" id="control_01" name="q1" value="Ja, we hebben al een training gedaan" >
+                                        <label class="select" for="control_01">
+                                            <h5>Ja, we hebben al een training gedaan </h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_02" name="q1" value="Nee, we hebben nog nooit een training gedaan">
+                                        <label class="select" for="control_02">
+                                            <h5>Nee, we hebben nog nooit een training gedaan </h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_03" name="q1" value="Ik weet niet of we een training hebben gedaan" checked>
+                                        <label class="select" for="control_03">
+                                            <h5>Ik weet niet of we een training hebben gedaan </h5>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Hoe lang bestaat jouw team al in zijn huidige
+                                            samenstelling?</h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <section>
+                                    <div>
+                                        <input type="radio" id="control_04" name="q2" value="Een aantal weken" >
+                                        <label class="select" for="control_04">
+                                            <h5>Een aantal weken</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_05" name="q2" value="Een aantal maanden">
+                                        <label class="select" for="control_05">
+                                            <h5>Een aantal maanden</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_06" name="q2" value="Een aantal jaar">
+                                        <label class="select" for="control_06">
+                                            <h5>Een aantal jaar</h5>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Welke training wil je volgen?</h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <section>
+                                    <div>
+                                        <input type="radio" id="control_07" name="q3" value="Insights Discovery" >
+                                        <label class="select" for="control_07">
+                                            <h5>Insights Discovery</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_08" name="q3" value="Mapstell">
+                                        <label class="select" for="control_08">
+                                            <h5>Mapstell</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_09" name="q3" value="Ik weet niet welke training">
+                                        <label class="select" for="control_09">
+                                            <h5>Ik weet niet welke training</h5>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Welke stelling past het beste bij jouw team? </h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <section class="set-column">
+                                    <div>
+                                        <input type="radio" id="control_10" name="q4" value="1" >
+                                        <label class="select" for="control_10">
+                                            <h5>“Er heerst een enthousiaste/positieve sfeer. En we verkennen elkaar op sociaal en professioneel gebied.”</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_11" name="q4" value="2">
+                                        <label class="select" for="control_11">
+                                            <h5>“Er is veel discussie, onenigheid en onderhandeling. Dit gaat soms ook gepaard met frustraties en heftige emoties.” </h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_12" name="q4" value="3">
+                                        <label class="select" for="control_12">
+                                            <h5>“Teamleden vullen elkaar aan en er wordt harmonieuws samengewerkt aan het gemeenschappelijke teamdoel. Teamleden stimuleren elkaar ook om beter te presteren.”</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_13" name="q4" value="4">
+                                        <label class="select" for="control_13">
+                                            <h5>"Teamleden komen dichter bij elkaar. Nieuwe regels, normen en waarden voor samenwerking worden vastgesteld.”  </h5>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+
+                                <div class="row">
+                                  <div class="col-9">
+                                      <h2 class="fs-title">Hoeveel tijd hebben jullie voor de training? </h2>
+                                  </div>
+                                  <div class="col-3 icon">
+                                      <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                  </div>
+                                </div>
+                                <section>
+                                    <div>
+                                        <input type="radio" id="control_14" name="q5" value="Een dagdeel" >
+                                        <label class="select" for="control_14">
+                                            <h5>Een dagdeel</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_15" name="q5" value="1 dag">
+                                        <label class="select" for="control_15">
+                                            <h5>1 dag</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_16" name="q5" value="Meerdere dagen">
+                                        <label class="select" for="control_16">
+                                            <h5>Meerdere dagen</h5>
+                                        </label>
+                                    </div>
+                                </section>
+                                <div class="row">
+                                  <div class="col-9 white-space">
+                                      <h2 class="fs-title">Hoeveel deelnemers zullen de training bijwonen? </h2>
+                                  </div>
+                                  <div class="col-7 center">
+                                      <h5>Voer het aantal personen in: </h5>
+                                  </div>
+                                  <div class="col-5">
+                                          <label class="fieldlabels"></label> <input type="text" name="faantal" placeholder="Geef aantal" />
+                                  </div>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Gegevens invullen</h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <label class="fieldlabels">Naam contactpersoon*</label> <input type="text" name="fname"
+                                                                                               placeholder="Naam contactpersoon" required class="required3"/>
+                                <label class="fieldlabels">Naam organisatie </label> <input type="text" name="lname"
+                                                                                            placeholder="Naam organisatie"/>
+                                <label class="fieldlabels">Telefoonnummer*</label> <input type="text" name="phno"
+                                                                                          placeholder="06-12345678" required class="required3"/>
+                                <label class="fieldlabels">E-mailadres *</label> <input type="text" name="phno_2"
+                                                                                        placeholder="E-mailadres" required class="required3"/>
+                            </div>
+                            <input type="button" id="next4" name="next" class="next action-button" value="Volgende" disabled/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h2 class="fs-title">Kies een trainer</h2>
+                                    </div>
+                                    <div class="col-3 icon">
+                                        <h6> <i class="fa fa-phone"></i> Bel ons</h6>
+                                    </div>
+                                </div>
+                                <section class="set-column">
+                                    <div>
+                                        <input type="radio" id="control_17" name="q6" value="Trainer A" >
+                                        <label class="select-left" for="control_17">
+                                            <h5>Trainer A</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_18" name="q6" value="Trainer B">
+                                        <label class="select-left" for="control_18">
+                                            <img class="trainer" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" width="200" height="200">
+                                            <h5>Trainer B <br> hello</h5> <br>
+                                            <h5>Trainer B</h5>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="control_19" name="q6" value="Trainer C">
+                                        <label class="select-left" for="control_19">
+                                            <h5>Trainer C</h5>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Volgende"/> <input
+                                type="button" name="previous" class="previous action-button-previous" value="Terug"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <!-- <div class="col-9">
+                                        <h2 class="fs-title">Vraag offerte aan</h2>
+                                    </div> -->
+                                </div>
+                                <br><br>
+                                <h2 class="green-text text-center"><strong>Vraag de offerte op</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"><input type="submit" name="next" class="next action-button"
+                                                              value="Opvragen"/></div>
+                                </div>
+                                <br><br>
+                                <div class="row justify-content-center">
+                                    <!-- <div class="col-9 text-center">
+                                        <h5 class="green-text text-center">You Have Successfully Signed Up</h5>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
